@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	
+	std::vector<int> a ;
+	a.push_back(10);
+	a.push_back(1);
+	a.push_back(4);
+	a.push_back(34);
+	a.push_back(12);
+	
+	cout<<"Array before sorting";
+	cout<<endl;
+	for(int i:a){
+	    cout<<i<<" ";
+	}
+	
+	cout<<endl;
+	
+	int size = a.size();
+	
+	for(int i=0; i<size-1; i++){
+	    
+	    int mini = i;
+	    
+	    for(int j=i; j<size; j++){
+	        if(a[j] < a[mini]){
+	            mini = j;
+	        }
+	    }
+	    
+	    int temp = a[i];
+	    a[i] = a[mini];
+	    a[mini] = temp;
+	}
+	
+	cout<<"Array after sorting";
+	cout<<endl;
+	for(int i:a){
+	    cout<<i<<" ";
+	}
+
+}
