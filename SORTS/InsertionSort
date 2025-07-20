@@ -1,0 +1,48 @@
+//First element is always sorted, so start loop from 1 directly
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	
+	std::vector<int> a ;
+	a.push_back(10);
+	a.push_back(1);
+	a.push_back(4);
+	a.push_back(34);
+	a.push_back(12);
+	
+	cout<<"INSERTION SORT";
+	
+	cout<<endl;
+	
+	cout<<"Array before sorting";
+	cout<<endl;
+	for(int i:a){
+	    cout<<i<<" ";
+	}
+	
+	cout<<endl;
+	
+	int size = a.size();
+	
+	
+	for(int i = 1; i <= size-1; i++){
+	    int j = i;
+	    while(j >0 && a[j-1] > a[j]){
+	        int temp = a[j];
+	        a[j] = a[j-1];
+	        a[j-1] = temp;
+	        
+	        j--;
+	    }
+	}
+	
+    
+	cout<<"Array after sorting";
+	cout<<endl;
+	for(int i:a){
+	    cout<<i<<" ";
+	}
+
+}
